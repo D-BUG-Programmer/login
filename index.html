@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/alert.css">
+<link rel="apple-touch-icon" href="text.png">
+<link rel="shortcut icon" href="text.png">
+</head>
+
+
+<body onload="loginData()">
+	
+
+	<div id="overlay" style="display:none;">
+	    <div class="spinner"></div>
+	    <br/>
+	    Loading...
+	</div>
+
+	<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+       
+        <div class="col-md-8 border-right">
+            <div class="p-3 py-5">
+            	<form action="post" id="updateForm">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" id="Name" name="user_name" class="form-control" placeholder="Name" value="" autocomplete="off"></div>
+                    <div class="col-md-6"><label class="labels">Username</label><input id="Username" name="user_usrname" autocomplete="off" type="text" class="form-control" value="" placeholder="Username"></div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Email</label><input type="text" id="Email" name="user_email" autocomplete="off" class="form-control" placeholder="Email" value=""></div>
+                    <div class="col-md-6"><label class="labels">Phone number</label><input type="text" name="user_phone" autocomplete="off" id="Phone" class="form-control" value="" placeholder="Phone number"></div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Address</label><textarea class="form-control" name="user_address" autocomplete="off" id="Address" placeholder="Enter your address"></textarea> </div>                   
+                </div>
+                
+                <input type="hidden" name="user_password" id="passcode">
+                <input type="hidden" name="user_sta" id="userSta">
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Update Profile</button></div>
+            </form>
+
+				<br>
+				<div class="alert-box success">Successful Updated !!!</div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center experience"><span></span><a href="javascript:;;" onclick="logout()" class="border px-3 p-1 add-experience"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></div><br>
+                
+            </div>
+        </div>
+    </div>
+</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/main.js?v=6"></script>
+</body>
+</html>
